@@ -283,10 +283,10 @@
         function myFunction() {
             const str = sessionStorage.getItem("countries1");
             const json = JSON.parse(str);
-            const element = document.querySelector('.instructions');
 
-            const newArray = json.map((i) => i.name); 
+            const newArray = json.map((i) => i.name);
             console.log(newArray)
+
             var randomlist = []
             while (randomlist.length < 51) {
                 var t = Math.floor(Math.random() * 242) + 0; //random function found at MDN
