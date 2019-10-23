@@ -22,7 +22,7 @@
         .then(res => res.map(c => c.name))
         .then(names => {
           var randomlist = []
-          while (randomlist.length < 16) {
+          while (randomlist.length < 15) {
             var t = Math.floor(Math.random() * 242) + 0; //random function found at MDN
             randomlist.push(names[t])
             for (let names = " ", x = 0; name = randomlist[x]; x++) {
