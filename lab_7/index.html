@@ -23,6 +23,10 @@
     function loadData() {
       fetch(url)
         .then(res => res.json())
+        .then(res =>{
+          console.log(res)
+          return res
+        })
         .then(res => res.map(c => c.route_id + ' ' + c.title))
         .then(data => {
           document.querySelector(".content").innerHTML = "";
