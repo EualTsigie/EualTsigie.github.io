@@ -23,14 +23,14 @@
     function loadData() {
       fetch(url)
         .then(res => res.json())
-        .then(res =>{
+        .then(res => {
           console.log(res)
           return res
         })
-        .then(res => res.map(c => c.course_id+':'+c.name))
+        .then(res => res.map(c => c.course_id + ':' + c.name))
         .then(data => {
           document.querySelector(".content").innerHTML = "";
-          for (let x = 0;x < data.length; x++) {
+          for (let x = 0; x < data.length; x++) {
             newlist = "<li>" + data[x] + "</li>";
             document.querySelector(".content").innerHTML += newlist;
           }
@@ -38,12 +38,12 @@
         }
         )
         .then(data => {
-         function BusRoute(routes) {
-           return routes === data[5]
-         }
-         new1 = data.find(BusRoute)
-         document.querySelector(".header").innerHTML = "UMD Bus Route" + " " + new1;
-         console.log(new1)
+          function BusRoute(routes) {
+            return routes === data[5]
+          }
+          new1 = data.find(BusRoute)
+          document.querySelector(".header").innerHTML = "UMD Bus Route" + " " + new1;
+          console.log(new1)
         }
         )
     }
