@@ -27,7 +27,7 @@
           console.log(res)
           return res
         })
-        .then(res => res.map(c => c.course_id + ':' + c.name))
+        .then(res => res.map(c => c.route_id + ':' + c.title))
         .then(data => {
           document.querySelector(".content").innerHTML = "";
           for (let x = 0; x < data.length; x++) {
